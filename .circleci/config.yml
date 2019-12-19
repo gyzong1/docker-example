@@ -8,7 +8,7 @@ jobs:
      # with credentials stored in the UI
      
      # build the application 
-     - run: cat /etc/docker/daemon.json 
-     - run: docker version
-     - run: docker build -t company/app:test .
+     - run: curl -uadmin:password -O http://13.229.71.253:8081/artifactory/maven-dev-local/org/jfrog/test/multi3/3.7-SNAPSHOT/multi3-3.7-20191219.073052-2.war
+
+     - run: docker build -t 13.229.71.253:8081/docker-virtual/app:test .
      
