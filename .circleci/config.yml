@@ -17,6 +17,7 @@ jobs:
      - run: curl -uadmin:password -O http://13.229.71.253:8081/artifactory/maven-dev-local/org/jfrog/test/multi3/3.7-SNAPSHOT/multi3-3.7-20191219.073052-2.war
      - run: ls -l
      - run: echo "13.229.71.253 www.testexample.com" >> /etc/hosts
+     - run: cat /etc/hosts
      #- run: docker login -u admin -p password 13.229.71.253:8081
      
      #- run: docker build -t 13.229.71.253:8081/docker-virtual/app:latest .
