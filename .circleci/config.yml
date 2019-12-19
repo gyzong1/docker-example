@@ -13,12 +13,9 @@ jobs:
      # Configure Artifactory instance with JFrog CLI
      #- ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASSWORD --interactive=false
      
-     # build the application 
+     # download
      - run: curl -uadmin:password -O http://13.229.71.253:8081/artifactory/maven-dev-local/org/jfrog/test/multi3/3.7-SNAPSHOT/multi3-3.7-20191219.073052-2.war
      - run: ls -l
-     #- run: sudo echo "13.229.71.253 www.testexample.com" >> /etc/hosts
-     #- run: cat /etc/hosts
-     #- run: docker login -u admin -p password 13.229.71.253:8081
      
      #- docker build -t $ARTIFACTORY_DOCKER_REPOSITORY/maven-version:$CIRCLE_BUILD_NUM .
      
