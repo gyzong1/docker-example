@@ -8,4 +8,5 @@ jobs:
       - run: echo "hello world" # run the `echo` command
       - run: ls -l
       - run: which docker
-      - run: docker build test/test .
+      - run: docker version
+      - run: docker build -t test/test .
