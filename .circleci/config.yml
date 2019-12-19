@@ -19,7 +19,7 @@ jobs:
      
      #- docker build -t $ARTIFACTORY_DOCKER_REPOSITORY/maven-version:$CIRCLE_BUILD_NUM .
      
-     #- docker login -e $ARTIFACTORY_EMAIL -u $ARTIFACTORY_USER -p $ARTIFACTORY_PASSWORD $ARTIFACTORY_DOCKER_REPOSITORY
+     #- docker login -u $ARTIFACTORY_USER -p $ARTIFACTORY_PASSWORD $ARTIFACTORY_DOCKER_REPOSITORY
      
      #- ./jfrog rt dp $ARTIFACTORY_DOCKER_REPOSITORY/maven-version:$CIRCLE_BUILD_NUM docker-virtual --build-name=circleci-docker-artifactory --build-number=$CIRCLE_BUILD_NUM
      
