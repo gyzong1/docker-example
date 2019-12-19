@@ -1,12 +1,12 @@
-version: 2.1
+version: 2
 jobs:
-  build:
-    docker: 
-      - image: docker # the primary container, where your job's commands are run
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
-      - run: ls -l
-      - run: which docker
-      - run: docker version
-      - run: docker build -t test/test .
+ build:
+   machine: true
+   steps:
+     - checkout
+     # start proprietary DB using private Docker image
+     # with credentials stored in the UI
+     
+     # build the application 
+     - run: docker version
+     - run: docker build -t company/app:test .
