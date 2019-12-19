@@ -1,13 +1,1 @@
 
-machine:
-  services:
-    - docker
-
-dependencies:
-  pre:
-    # Install JFrog CLI
-    - curl -fL https://getcli.jfrog.io | sh
-    # Configure Artifactory instance with JFrog CLI
-    - ls -l
-  override:
-    - docker build -t hegaoye/tomcat .
