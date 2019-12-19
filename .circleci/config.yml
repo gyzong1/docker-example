@@ -1,11 +1,13 @@
 
-version: 2.1
-jobs:
-  build:
-    docker: 
-      - image: docker:stable # the primary container, where your job's commands are run
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
-      - run: ls -l
-      - run: docker build -t hegaoye/tomcat .
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    # Install JFrog CLI
+    - curl -fL https://getcli.jfrog.io | sh
+    # Configure Artifactory instance with JFrog CLI
+    - ls -l
+  override:
+    - docker build -t hegaoye/tomcat .
