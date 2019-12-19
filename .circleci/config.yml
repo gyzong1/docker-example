@@ -8,7 +8,7 @@ jobs:
      # with credentials stored in the UI
      
      # build the application 
-     - run: docker login -u admin -p password 13.229.71.253:8081
+     - run: cat /etc/docker/daemon.json 
      - run: docker version
      - run: docker build -t company/app:test .
      
